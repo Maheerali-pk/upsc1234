@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'DM Sans';
+  font-weight: 500;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  font-weight: 500;
+  font-family: 'DM Sans';
+  box-sizing: border-box;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+select,
+option {
+  font-family: 'DM Sans';
+  font-weight: 400;
+}
+
+@layer base {
+
+  input[type="number"],
+  input[type="date"],
+  input[type="text"],
+  select,
+  textarea {
+    @apply border border-gray-400 py-4.25 px-6.5 text-gray-400 rounded-lg text-base outline-none font-normal;
+  }
+
+  select {
+    @apply bg-white;
+
+  }
+}
+
+@layer components {
+
+  .btn {
+    @apply rounded-full text-white text-lg py-4 bg-blue-400 text-center h-fit cursor-pointer;
+  }
+
+  .btn-dark {
+    @apply rounded-full text-white text-lg py-4 bg-blue-600 text-center h-fit cursor-pointer;
+  }
+
+  .btn-white {
+    @apply rounded-full text-gray-800 text-lg py-4 bg-white text-center h-fit border border-gray-400 cursor-pointer;
+  }
+
+  .btn-outlined {
+    @apply rounded-lg text-blue-400 text-lg py-4 bg-white text-center h-fit border border-blue-400 cursor-pointer;
+  }
+
+  .abs-center {
+    @apply top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 absolute
+  }
+
+}
+
+
+.swiper-pagination-bullet-active {
+  background-color: rgba(6, 44, 76, 1) !important;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+
+  color: black !important;
+  width: 11px !important;
+  aspect-ratio: 1/1 !important;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 2rem !important;
+
+}
