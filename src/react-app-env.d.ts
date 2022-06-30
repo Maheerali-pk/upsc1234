@@ -14,3 +14,13 @@ type IDegree = ValueObject<"currentStudying" | "degree" | "stream" | "college" |
 type IUPSCAttempt = ValueObject<
    "yearOfAttempt" | "qualifiedForMains" | "qualifiedForInterview" | "optSubject" | "language"
 >;
+
+type StatePCNames =
+   | "yearOfAttempt"
+   | "qualifiedForMains"
+   | "qualifiedForInterview"
+   | "optSubject"
+   | "language"
+   | "state";
+
+type IStatePCAttempt = ValueObject<StatePCNames>;

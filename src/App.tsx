@@ -17,6 +17,7 @@ import Preferences from "./Pages/StudentProfile/Preferencecs";
 import Academics from "./Pages/StudentProfile/Academics";
 import { JSONTree } from "react-json-tree";
 import UPSCJourney from "./Pages/StudentProfile/UPSCJourney";
+import StatePC from "./Pages/StudentProfile/StatePC";
 
 const Info = () => {
    const [data, setData] = useState();
@@ -52,6 +53,7 @@ function App() {
                <Route path="/preferences" element={<Preferences></Preferences>}></Route>
                <Route path="/academics" element={<Academics></Academics>}></Route>
                <Route path="/upsc-journey" element={<UPSCJourney></UPSCJourney>}></Route>
+               <Route path="/state-pcs" element={<StatePC></StatePC>}></Route>
                <Route path="/info" element={<Info></Info>}></Route>
             </Routes>
          </div>
