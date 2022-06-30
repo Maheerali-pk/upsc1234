@@ -16,6 +16,7 @@ import Experience from "./Pages/StudentProfile/Experience";
 import Preferences from "./Pages/StudentProfile/Preferencecs";
 import Academics from "./Pages/StudentProfile/Academics";
 import { JSONTree } from "react-json-tree";
+import UPSCJourney from "./Pages/StudentProfile/UPSCJourney";
 
 const Info = () => {
    const [data, setData] = useState();
@@ -50,6 +51,7 @@ function App() {
                <Route path="/experience" element={<Experience></Experience>}></Route>
                <Route path="/preferences" element={<Preferences></Preferences>}></Route>
                <Route path="/academics" element={<Academics></Academics>}></Route>
+               <Route path="/upsc-journey" element={<UPSCJourney></UPSCJourney>}></Route>
                <Route path="/info" element={<Info></Info>}></Route>
             </Routes>
          </div>
