@@ -1,13 +1,13 @@
 import { useForm } from "../hooks/useForm";
 
-interface StatePCAttempProps {
+interface StatePCAttemptFormProps {
    onChange: (data: IStatePCAttempt) => void;
    onClose: (id: string) => void;
    showCloseBtn?: boolean;
    id: string;
 }
 
-const StatePCAttemptForm: React.FC<StatePCAttempProps> = ({ onChange, onClose, id, showCloseBtn }) => {
+const StatePCAttemptForm: React.FC<StatePCAttemptFormProps> = ({ onChange, onClose, id, showCloseBtn }) => {
    const { onChangeEvents, values } = useForm<StatePCNames>({
       inputs: {
          yearOfAttempt: { type: "number" },

@@ -23,4 +23,7 @@ type StatePCNames =
    | "language"
    | "state";
 
+type OtherExamNames = "title" | "yearOfAttempt" | "description";
+type IOtherExam = ValueObject<OtherExamNames>;
+
 type IStatePCAttempt = ValueObject<StatePCNames>;
