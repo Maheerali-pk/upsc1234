@@ -28,14 +28,18 @@ export function useForm<Names extends string>(props: Props<Names>) {
 
    const onAnyChange = () => {
       if (props.onAnyChange) {
-         const values = Object.fromEntries(Object.keys(data).map((x) => [x as Names, data[x as Names].value])) as {
+         const values = Object.fromEntries(
+            Object.keys(data).map((x) => [x as Names, data[x as Names].value])
+         ) as {
             [k in Names]: IInputValue;
          };
          props.onAnyChange(values);
       }
    };
 
-   const values = Object.fromEntries(Object.keys(data).map((x) => [x as Names, data[x as Names].value])) as {
+   const values = Object.fromEntries(
+      Object.keys(data).map((x) => [x as Names, data[x as Names].value])
+   ) as {
       [k in Names]: IInputValue;
    };
 
@@ -46,7 +50,10 @@ export function useForm<Names extends string>(props: Props<Names>) {
       fetch(`${host}${props.api}`, {
          method: "POST",
          body: JSON.stringify(values),
-         headers: { "Content-Type": "application/json", Authorization: `Bearer ${localStorage.getItem("auth-token")}` },
+         headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${localStorage.getItem("auth-token")}`,
+         },
       })
          .then((res) => res.json())
          .then((data) => {
@@ -57,7 +64,11 @@ export function useForm<Names extends string>(props: Props<Names>) {
                }
                dispatch({ setState: { error: { title: "", message: "" } } });
             } else {
-               dispatch({ setState: { error: { title: data.error, message: data.message } } });
+               dispatch({
+                  setState: {
+                     error: { title: data.error, message: data.message },
+                  },
+               });
             }
          })
          .catch((err) => {})

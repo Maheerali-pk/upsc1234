@@ -150,6 +150,9 @@ const Academics: React.FC = () => {
          </div>
          <div className="flex items-center mt-20 h-full justify-end flex-col gap-7 w-full">
             <div className="btn w-full" onClick={onClickOnNext}>
+               Go back
+            </div>
+            <div className="btn w-full" onClick={onClickOnNext}>
                Next
             </div>
          </div>
